@@ -9,11 +9,15 @@ publisher.bind('tcp://127.0.0.1:3000', err => {
 })
 
 fs.watchFile(filename, () => {
-    const message = JSON.stringify({
+    const message1 = JSON.stringify({
         type: 'changed',
-        file: filename,
+        file: filename
+    })
+    const message2 = JSON.stringify({
+        type: 'changed',
         timestamp: Date.now()
     })
-    console.log(">",message);
-    publisher.send(message)
+    console.log(">",message1, message2);
+    publisher.send(['ByFilename', message1])
+    publisher.send(['ByDate', message2])
 })
