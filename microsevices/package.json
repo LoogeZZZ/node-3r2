@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "package.json": "^2.0.1",
     "zeromq": "^5.2.8"
   }
 }
- 
