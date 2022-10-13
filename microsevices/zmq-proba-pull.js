@@ -5,4 +5,4 @@ puller.on('message', msg => {
     console.log("Получено новое сообщение! " + msg);
 })
 
-puller.connect('tcp://localhost:3000')
+puller.connect('tcp://localhost:3000') 
